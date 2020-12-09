@@ -1,0 +1,8 @@
+[{ "title": "Check Water", "key": "1", "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."},
+{ "title": "Read DG", "key": "2",  "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."},
+{ "title": "Repair fan", "key": "3", "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+{ "title": "Maintain Oil", "key": "4", "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+{ "title": "Read current", "key": "5", "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+{ "title": "Fill distilled water", "key": "6", "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+{ "title": "Manage Lights", "key": "7", "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry." },
+{ "title": "Take rest", "key": "8", "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry." }]
