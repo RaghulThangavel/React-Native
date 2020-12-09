@@ -1,8 +1,8 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
-import Scanner from '../components/scan';
+import Scanner from '../screens/scan';
 import Header from '../shared/header';
-
+import { defaultColor } from '../styles/globalStyle';
 const screens = {
  
 
@@ -21,7 +21,7 @@ const ScannerStack = createStackNavigator(screens, {
     defaultNavigationOptions : {
         headerTintColor : 'white',
         headerStyle : {
-            backgroundColor : 'coral',
+            backgroundColor : defaultColor,
         } 
     }
 });

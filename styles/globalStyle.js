@@ -1,12 +1,15 @@
 
 import {StyleSheet} from 'react-native';
 
-export const  globalStyle = StyleSheet.create({
+const defaultColor = '#361a7f';
+const defaultButtonColor = '#4b2e94';
+
+const  globalStyle = StyleSheet.create({
     header : {
         flexDirection : 'row',
         height : 100,
         paddingTop : 38,
-        backgroundColor: 'coral',
+        backgroundColor: defaultColor,
     },
 
     title : {
@@ -23,7 +26,7 @@ export const  globalStyle = StyleSheet.create({
         flexDirection : 'row',
         justifyContent : 'space-around',
         padding : 10,
-        backgroundColor: 'coral',
+        backgroundColor: defaultColor,
     },
 
     footerText : {
@@ -68,3 +71,5 @@ export const  globalStyle = StyleSheet.create({
         fontWeight : 'bold',
     }
 })
+
+export {defaultColor, globalStyle, defaultButtonColor}

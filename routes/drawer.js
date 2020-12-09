@@ -3,6 +3,7 @@ import {createAppContainer, } from 'react-navigation';
 import HomeStack from './homeStack';
 import AboutUsStack from './aboutStack';
 import ScannerStack from './scanStack';
+import DocumentStack from './documentStack';
 
 const RootDrawerNav = createDrawerNavigator({
     Home : {
@@ -14,6 +15,9 @@ const RootDrawerNav = createDrawerNavigator({
     Scan : {
         screen : ScannerStack
     },
+    'Document Upload' : {
+        screen : DocumentStack
+    }
 
 });
 

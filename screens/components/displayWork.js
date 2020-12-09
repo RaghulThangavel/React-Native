@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons'; 
-import { globalStyle } from '../styles/globalStyle';
-import Card from '../shared/card';
+import { globalStyle } from '../../styles/globalStyle';
+import Card from '../../shared/card';
 
 export default function DisplayWork({item}){
     return (

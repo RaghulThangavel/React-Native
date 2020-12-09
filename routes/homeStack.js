@@ -1,10 +1,10 @@
 import {createStackNavigator} from 'react-navigation-stack';
-import Work from '../components/work';
-import Home from '../components/home';
-import WorkDetails from '../components/workDetails';
+import Work from '../screens/work';
+import Home from '../screens/home';
+import WorkDetails from '../screens/workDetails';
 import React from 'react';
 import Header from '../shared/header';
-
+import { defaultColor } from '../styles/globalStyle';
 const screens = {
     Home : {
         screen : Home,
@@ -33,7 +33,7 @@ const HomeStack = createStackNavigator(screens, {
     defaultNavigationOptions : {
         headerTintColor : 'white',
         headerStyle : {
-            backgroundColor : 'coral',
+            backgroundColor : defaultColor,
         } 
         
     }

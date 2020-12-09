@@ -1,24 +1,23 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
-import Aboutus from '../screens/aboutus';
+import DocumentUpload from '../screens/documentUpload';
 import Header from '../shared/header';
-import { defaultColor } from '../styles/globalStyle';
-
+import {defaultColor} from '../styles/globalStyle';
 const screens = {
  
 
-    About : {
-        screen : Aboutus,
+    Scan : {
+        screen : DocumentUpload,
         navigationOptions : ({navigation }) => {
             return {
-                headerTitle :() => <Header navigation = {navigation} title='About Us' />
+                headerTitle :() => <Header navigation = {navigation} title='Upload Document' />
             }
         }
     },
 
 }
 
-const AboutUsStack = createStackNavigator(screens, {
+const DocumentStack = createStackNavigator(screens, {
     defaultNavigationOptions : {
         headerTintColor : 'white',
         headerStyle : {
@@ -27,4 +26,4 @@ const AboutUsStack = createStackNavigator(screens, {
     }
 });
 
-export default AboutUsStack;
+export default DocumentStack;

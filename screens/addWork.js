@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, Alert, View, TextInput, Button, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import Card from '../shared/card';
-import { globalStyle } from '../styles/globalStyle';
+import { globalStyle, defaultButtonColor, defaultColor} from '../styles/globalStyle';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
@@ -48,7 +48,7 @@ export default function AddWork({addWork}  ) {
                                     onBlur={props.handleBlur( 'description' )}
                                 />
                                 <Text style={globalStyle.errorText}>{ props.touched.description && props.errors.description }</Text>
-                                <Button title='Add Work' onPress={props.handleSubmit} color='coral' />
+                                <Button title='Add Work' onPress={props.handleSubmit} color= { defaultButtonColor } />
                             </View>
                         )}
                     </Formik> 

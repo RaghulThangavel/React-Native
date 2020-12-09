@@ -11,10 +11,9 @@ import
     TouchableWithoutFeedback,
     Alert
   } from 'react-native';
-import { globalStyle } from '../styles/globalStyle';
-import DisplayWork from './displayWork';
+import { globalStyle, defaultButtonColor, defaultColor } from '../styles/globalStyle';
+import DisplayWork from './components/displayWork';
 import {MaterialIcons} from '@expo/vector-icons'
-import Card from '../shared/card';
 import AddWork from './addWork';
 
 export default function Work({navigation}){
@@ -43,7 +42,7 @@ export default function Work({navigation}){
     return (
 
         <View style={globalStyle.content}>
-            <Button title='Add Work' onPress={()=> setModelVisibility(true)} color='coral'/>
+            <Button title='Add Work' onPress={()=> setModelVisibility(true)} color= {defaultButtonColor}/>
           
               <Modal visible={modelVisibility} animationType='slide'>
                 <TouchableWithoutFeedback
@@ -90,7 +89,7 @@ const styles = StyleSheet.create({
         color : 'white',
         padding : 10,
         borderRadius : 50,
-        backgroundColor : 'coral'
+        backgroundColor : defaultColor,
       },
       modelContent : {
         flex : 1,

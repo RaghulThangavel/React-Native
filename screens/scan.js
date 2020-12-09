@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import { Dimensions, StyleSheet, Text, View, Button } from 'react-native';
 import {BarCodeScanner} from 'expo-barcode-scanner';
+import { defaultButtonColor } from '../styles/globalStyle';
 const { width } = Dimensions.get('window');
 
 export default function Scanner() {
@@ -44,7 +45,7 @@ export default function Scanner() {
         </View>
         <View style={styles.layer}>
             <View style={styles.button}>
-            {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}
+            {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} color = {defaultButtonColor} />}
         </View>
             </View>
         
