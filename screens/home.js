@@ -21,7 +21,7 @@ export default function Home({navigation}) {
                     <Button  title = 'Scan Code' onPress={() => pressHandler('Scan') } color={defaultButtonColor}/>
                 </View>
                 <View style={globalStyle.button}>
-                    <Button  title = 'Upload Document' onPress={() => pressHandler('Document Upload') } color={defaultButtonColor}/>
+                    <Button  title = 'Upload Document' onPress={() => pressHandler('Document') } color={defaultButtonColor}/>
                 </View>
 
             </Card>

@@ -6,7 +6,7 @@ import {defaultColor} from '../styles/globalStyle';
 const screens = {
  
 
-    Scan : {
+    Document : {
         screen : DocumentUpload,
         navigationOptions : ({navigation }) => {
             return {

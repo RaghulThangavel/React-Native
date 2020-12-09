@@ -3,7 +3,7 @@ import {View, Button} from 'react-native';
 import Card from '../shared/card';
 import { defaultButtonColor, globalStyle } from '../styles/globalStyle';
 import * as DocumentPicker from 'expo-document-picker';
-import { AntDesign } from '@expo/vector-icons'; 
+
 export default function DocumentUpload() {
 
     const _pickDocument = async () => {

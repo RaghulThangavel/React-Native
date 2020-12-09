@@ -15,9 +15,10 @@ const RootDrawerNav = createDrawerNavigator({
     Scan : {
         screen : ScannerStack
     },
-    'Document Upload' : {
+    Document : {
         screen : DocumentStack
-    }
+    },
+    
 
 });
 
