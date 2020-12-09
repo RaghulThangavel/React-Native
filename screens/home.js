@@ -21,6 +21,7 @@ export default function Home({navigation}) {
                     Welcome Back!
                 </Text>
                 <Fontisto name='smiley' style={globalStyle.welcomeIcon}/>
+
                 <TouchableOpacity style={globalStyle.navContent} onPress={() => pressHandler('Work')}>
                     <MaterialCommunityIcons 
                         name="worker" 
@@ -29,29 +30,26 @@ export default function Home({navigation}) {
                     <Text style={globalStyle.navText}>Work Orders</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={globalStyle.navContent}>
+                <TouchableOpacity style={globalStyle.navContent} onPress={() => pressHandler('About')}>
                 <AntDesign 
                     name="infocirlceo"
                     style={globalStyle.navButton} 
-                        onPress={() => pressHandler('About')}
                     />
                     <Text style={globalStyle.navText}>About Us</Text>
                 </TouchableOpacity>  
                     
-                <TouchableOpacity style={globalStyle.navContent}>
+                <TouchableOpacity style={globalStyle.navContent} onPress={() => pressHandler('Scan')}>
                     <MaterialCommunityIcons 
                         name="barcode-scan" 
                         style={globalStyle.navButton} 
-                        onPress={() => pressHandler('Scan')}
                     />
                     <Text style={globalStyle.navText}>Scanner</Text>
                 </TouchableOpacity>
                 
-                <TouchableOpacity style={globalStyle.navContent}>
+                <TouchableOpacity style={globalStyle.navContent} onPress={() => pressHandler('Document')}>
                     <AntDesign 
                         name="addfile"
                         style={globalStyle.navButton} 
-                        onPress={() => pressHandler('Document')}
                     />
                     <Text style={globalStyle.navText}>Upload Document</Text>
                 </TouchableOpacity>
