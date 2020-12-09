@@ -1,8 +1,9 @@
-
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
 const defaultColor = '#361a7f';
 const defaultButtonColor = '#4b2e94';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const  globalStyle = StyleSheet.create({
     header : {
@@ -60,15 +61,49 @@ const  globalStyle = StyleSheet.create({
         marginBottom: 10,
     },
     formTitle :{
-        alignSelf : 'center',
         fontWeight : 'bold',
-        fontSize : 25,
+        fontSize : 18,
         padding : 10,
+        color : 'black',
+        alignSelf : 'center',
     },
     errorText : {
         color : 'crimson',
         marginBottom : 15,
         fontWeight : 'bold',
+    },
+    navButton : {
+        margin : 5,
+        alignSelf:'flex-start',
+        color : 'white',
+        padding : 10,
+        fontSize : 20,
+        borderRadius : 50,
+        backgroundColor : defaultColor,
+    },
+    navText : {
+        fontWeight : 'bold',
+        fontSize : 15,
+        paddingTop : 15,
+        color : 'white',
+        paddingLeft : 5,
+
+    },
+    navContent : {
+        paddingLeft : 10,
+        flexDirection : 'row',
+        backgroundColor : defaultButtonColor,
+        margin : 8,
+        borderRadius : 50
+    },
+    welcomeIcon : {
+        fontSize : 28,
+        alignSelf : 'center',
+        marginBottom : 5,
+    },
+    welcomeImage : {
+        height : 130,
+        width : '100%',
     }
 })
 
