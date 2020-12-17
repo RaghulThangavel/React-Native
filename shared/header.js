@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image } from 'react-native';
-import {MaterialIcons} from '@expo/vector-icons'
+import {Ionicons} from '@expo/vector-icons'
 export default function Header({navigation, title}) {
 
     const openMenu = () => {
@@ -12,12 +12,13 @@ export default function Header({navigation, title}) {
             <Image 
             style={styles.profile}
                 source={{
-                    uri: 'https://lh3.googleusercontent.com/proxy/XOVItw_WJqA52NmRA7SRn99Ayeg7mQ9QZVpxFF_d1yVHtkSh4KQyAqxIi61HaHBUkucgLPSNt6vQjiEUOXiLw5mmZGtaCw_zQ8kP18ZS2Ufg-RfOlXXPfnDm1sKRzErYpNyvG3b8',
+                    uri: 'https://i0.wp.com/365webresources.com/wp-content/uploads/2016/09/FREE-PROFILE-AVATARS.png?resize=502%2C494&ssl=1',
                   }}
             />
             <Text style={styles.headerText}>
                 {title }
             </Text>
+            <Ionicons style={styles.icon} name="md-notifications-outline" size={24} color="white" />
         </View>
     )
 }
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
         fontSize : 25,
         color : 'white',
         position : 'absolute',
-        left : 5,
+        right : 5,
     },
     profile : {
         height : 27,

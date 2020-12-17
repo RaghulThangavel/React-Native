@@ -5,10 +5,13 @@ import HomeStack from './homeStack';
 import AboutUsStack from './aboutStack';
 import ScannerStack from './scanStack';
 import DocumentStack from './documentStack';
-import { MaterialCommunityIcons, AntDesign, Fontisto, FontAwesome } from '@expo/vector-icons'; 
-import React from 'react';
-import {globalStyle, defaultButtonColor, defaultColor} from '../styles/globalStyle';
-import {StyleSheet, Dimensions} from 'react-native';
+import Add from '../screens/add';
+import { MaterialCommunityIcons, AntDesign, FontAwesome } from '@expo/vector-icons'; 
+import React, {useState} from 'react';
+import {defaultButtonColor} from '../styles/globalStyle';
+import {StyleSheet} from 'react-native';
+
+
 const RootDrawerNav = createBottomTabNavigator(
     {
         Home : {
@@ -29,6 +32,15 @@ const RootDrawerNav = createBottomTabNavigator(
                     name="infocirlceo"
                     size={24} color={tintColor}
                     />
+                ),
+            },
+        },
+        Add : {
+            screen : Add,
+            navigationOptions: {
+                title : '',
+                tabBarIcon: ({tintColor}) => (
+                    <AntDesign name="pluscircleo" size={30} style = {styles.add} color={tintColor} />
                 ),
             },
         },
@@ -59,10 +71,10 @@ const RootDrawerNav = createBottomTabNavigator(
     },
     {
         tabBarOptions: {
-            activeBackgroundColor: defaultButtonColor,
-            activeTintColor: '#fff',
+            activeBackgroundColor: '#fff',
+            activeTintColor: defaultButtonColor,
             activeColor : defaultButtonColor,
-            inactiveTintColor : defaultButtonColor,
+            inactiveTintColor : 'grey',
             inactiveBackgroundColor: '#fff',
             style : {
                 borderTopColor : '#fff',
@@ -75,3 +87,10 @@ const RootDrawerNav = createBottomTabNavigator(
 );
 
 export default createAppContainer(RootDrawerNav);
+
+
+const styles = StyleSheet.create({
+    add : {
+        paddingTop : 10,
+    }
+})
