@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import 
     { StyleSheet, 
     FlatList, 
@@ -9,7 +9,7 @@ import
     Keyboard, 
     TouchableOpacity, 
     TouchableWithoutFeedback,
-    Alert
+    BackHandler
   } from 'react-native';
 import { globalStyle, defaultButtonColor, defaultColor } from '../styles/globalStyle';
 import DisplayWork from './components/displayWork';
@@ -38,6 +38,18 @@ export default function Work({navigation}){
       //   })();
       //   setModelVisibility(false);
       // }
+
+      useEffect(() => {
+        const backAction = () => {
+          setModelVisibility(false);
+          return true;
+        };
+    
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+    
+        return () => backHandler.remove();
+      }, []);
+
 
     return (
 

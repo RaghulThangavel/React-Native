@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import {defaultButtonColor} from '../styles/globalStyle'
 
-export default function Card(props) {
+export default function CardList(props) {
     return (
         <View style={styles.card}>
             <View style={styles.cardContent}>
@@ -24,10 +24,12 @@ const styles = StyleSheet.create({
         shadowRadius : 4,
         marginHorizontal : 5,
         marginVertical : 10,
+        borderLeftColor : defaultButtonColor,
+        borderLeftWidth : 1,
     },
 
     cardContent : {
-        paddingHorizontal : 18,
+        paddingHorizontal : 10,
         paddingVertical : 25,
     }
 })

@@ -1,18 +1,21 @@
 import React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons'; 
+import { MaterialIcons, Entypo } from '@expo/vector-icons'; 
 import { globalStyle } from '../../styles/globalStyle';
-import Card from '../../shared/card';
+import CardList from '../../shared/cardList';
 
 export default function DisplayWork({item}){
     return (
-            <Card >
+            <CardList>
                 <View style={styles.item}>
-                    <MaterialIcons name='work' size={18}/>
+                    <View style={styles.iconStyle}>
+                        <Entypo name="dots-three-vertical" size={18} color="grey" />
+                    </View>
+                    <MaterialIcons name='work' size={18} style={{marginTop : 2}}/>
                     <Text style={globalStyle.text}>{item.title}</Text>
                 </View>
                 
-            </Card>
+            </CardList>
     )
 }
 
@@ -21,5 +24,7 @@ const styles = StyleSheet.create({
         flexDirection : 'row',
         // borderStyle : 'solid',
     },
-    
+    iconStyle : {
+        marginTop : 2,
+    },
 })
